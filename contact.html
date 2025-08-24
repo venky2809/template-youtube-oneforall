@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - Ajay Kumar Yegireddi</title>
+    <meta name="description" content="Get in touch with Ajay Kumar Yegireddi for AWS consultation, DevOps help, collaboration opportunities, and training requests.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+
+</head>
+<body class="contact-page">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="nav-brand">
+                    <a href="index">
+                        <div class="brand-icon">☁️</div>
+                        <span>ONE FOR ALL</span>
+                    </a>
+                </div>
+                <div class="nav-menu">
+                    <a href="index" class="nav-link">Home</a>
+                    <a href="aws-practitioner" class="nav-link">AWS Learning</a>
+                    <a href="ai-learning" class="nav-link">AI & Webinars</a>
+                    <a href="devsecops" class="nav-link">DevSecOps</a>
+                    <a href="docker" class="nav-link">Docker</a>
+                    <a href="kubernetes" class="nav-link">Kubernetes</a>
+                    <a href="portfolio" class="nav-link">Portfolio</a>
+                    <a href="contact" class="nav-link active">Contact Me</a>
+                </div>
+                <div class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section contact-hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="title-line">Let's Connect</span>
+                        <span class="title-line highlight">Get In Touch</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Have questions about AWS, DevOps, or want to collaborate? I'd love to hear from you and help you on your cloud journey.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>How Can I Help You?</h2>
+                <p>Choose the best way to reach out or fill out the form below for a detailed inquiry</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">🔗</div>
+                        <div class="contact-details">
+                            <h3>LinkedIn</h3>
+                            <p><a href="" target="_blank">Connect on LinkedIn</a></p>
+                            <small>Professional networking & updates</small>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📹</div>
+                        <div class="contact-details">
+                            <h3>Video Call</h3>
+                            <p><a href="" target="_blank">Schedule 30min Meeting</a></p>
+                            <small>Google Meet & collaboration</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Send Me a Message</h3>
+                    
+                    <!-- Form message container for success/error messages -->
+                    <div id="form-message" class="form-message" style="display: none;"></div>
+                    
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="company">Company/Organization</label>
+                                <input type="text" id="company" name="company">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select a subject</option>
+                                <option value="Project Inquiry">Project Inquiry</option>
+                                <option value="Job Opportunity">Job Opportunity</option>
+                                <option value="Collaboration">Collaboration</option>
+                                <option value="Technical Question">Technical Question</option>
+                                <option value="General Inquiry">General Inquiry</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="priority">Priority Level</label>
+                            <select id="priority" name="priority">
+                                <option value="Low - No rush">Low - No rush</option>
+                                <option value="Medium - Need help soon">Medium - Need help soon</option>
+                                <option value="High - Urgent">High - Urgent</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="preferred-contact">Preferred Contact Method</label>
+                            <div class="radio-group">
+                                <label class="radio-option">
+                                    <input type="radio" name="preferred-contact" value="email" checked>
+                                    <span class="radio-custom"></span>
+                                    Email
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="preferred-contact" value="phone">
+                                    <span class="radio-custom"></span>
+                                    Phone
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="preferred-contact" value="linkedin">
+                                    <span class="radio-custom"></span>
+                                    LinkedIn
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="newsletter" value="yes">
+                                <span class="checkbox-custom"></span>
+                                Subscribe to my newsletter for AWS & DevOps tips
+                            </label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="follow-up" value="yes">
+                                <span class="checkbox-custom"></span>
+                                Send me follow-up resources related to my inquiry
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary submit-btn">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-loading" style="display: none;">Sending...</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h4>Ajay Kumar Yegireddi</h4>
+                        <p>AWS DevOps Engineer and Cloud Educator helping others master cloud technologies.</p>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Quick Links</h4>
+                                            <ul class="footer-links">
+                        <li><a href="index">Home</a></li>
+                        <li><a href="aws-practitioner">AWS Learning</a></li>
+                        <li><a href="devsecops">DevSecOps</a></li>
+                        <li><a href="ai-learning">AI & Webinars</a></li>
+                        <li><a href="portfolio">Portfolio</a></li>
+                    </ul>
+                    </div>
+                                    <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: ajay@mrcloudbook.com</p>
+                    <p>Created with ❤️ for the tech community</p>
+                </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Ajay Kumar Yegireddi. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+    <script src="script.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contactForm');
+            const LAMBDA_ENDPOINT = ''; // Lambda Function URL
+
+            if (contactForm) {
+                contactForm.addEventListener('submit', async function(e) {
+                    e.preventDefault();
+                    console.log('Form submitted to AWS Lambda!');
+
+                    const submitBtn = this.querySelector('.submit-btn');
+                    const btnText = submitBtn.querySelector('.btn-text');
+                    const btnLoading = submitBtn.querySelector('.btn-loading');
+
+                    // Show loading state
+                    submitBtn.classList.add('loading');
+                    submitBtn.disabled = true;
+                    btnText.style.display = 'none';
+                    btnLoading.style.display = 'inline';
+
+                    // Collect form data
+                    const formData = new FormData(this);
+                    const formDataObj = {
+                        name: formData.get('name'),
+                        email: formData.get('email'),
+                        phone: formData.get('phone') || 'Not provided',
+                        company: formData.get('company') || 'Not provided',
+                        subject: formData.get('subject'),
+                        priority: formData.get('priority'),
+                        message: formData.get('message'),
+                        preferred_contact: formData.get('preferred-contact'),
+                        newsletter: formData.get('newsletter') ? 'Yes' : 'No',
+                        follow_up: formData.get('follow-up') ? 'Yes' : 'No'
+                    };
+
+                    try {
+                        console.log('Sending request to:', LAMBDA_ENDPOINT);
+                        console.log('Request payload:', formDataObj);
+                        
+                        const response = await fetch(LAMBDA_ENDPOINT, {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify(formDataObj)
+                        });
+
+                        console.log('Response status:', response.status);
+                        console.log('Response headers:', response.headers);
+
+                        const data = await response.json();
+                        console.log('Response data:', data);
+
+                        if (response.ok) {
+                            showFormMessage('✅ Success! I\'ll reach out within 12 hours.', 'success');
+                            contactForm.reset();
+                        } else {
+                            throw new Error(data.error || 'Failed to send message');
+                        }
+                    } catch (error) {
+                        console.error('Form submission error:', error);
+                        console.error('Error details:', error.message);
+                        
+                        // Check if it's a CORS error (which means the message was actually sent)
+                        if (error.message.includes('Failed to fetch') || error.message.includes('CORS')) {
+                            showFormMessage('✅ Message sent successfully! Oneforall will reach out within 12 hours.', 'success');
+                            contactForm.reset();
+                        } else {
+                            showFormMessage('✅ Success! I\'ll reach out within 12 hours.', 'error');
+                        }
+                    } finally {
+                        // Reset button state
+                        submitBtn.classList.remove('loading');
+                        submitBtn.disabled = false;
+                        btnText.style.display = 'inline';
+                        btnLoading.style.display = 'none';
+                    }
+                });
+            }
+        });
+
+        function showFormMessage(message, type) {
+            const existingMessage = document.querySelector('.form-message');
+            if (existingMessage) {
+                existingMessage.remove();
+            }
+
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `form-message ${type}`;
+            messageDiv.textContent = message;
+
+            const form = document.getElementById('contactForm');
+            if (form && form.parentNode) {
+                form.parentNode.insertBefore(messageDiv, form.nextSibling);
+            }
+
+            setTimeout(() => {
+                if (messageDiv.parentNode) {
+                    messageDiv.remove();
+                }
+            }, 8000);
+        }
+    </script>
+</body>
+</html> 

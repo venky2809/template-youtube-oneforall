@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kubernetes Orchestration - Ajay Kumar Yegireddi</title>
+    <meta name="description" content="Master Kubernetes container orchestration with hands-on projects, best practices, and production deployments.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="nav-brand">
+                    <a href="index">
+                        <div class="brand-icon">☁️</div>
+                        <span>ONE FOR ALL</span>
+                    </a>
+                </div>
+                <div class="nav-menu">
+                    <a href="index" class="nav-link">Home</a>
+                    <a href="aws-practitioner" class="nav-link">AWS Learning</a>
+                    <a href="ai-learning" class="nav-link">AI & Webinars</a>
+                    <a href="devsecops" class="nav-link">DevSecOps</a>
+                    <a href="docker" class="nav-link">Docker</a>
+                    <a href="kubernetes" class="nav-link active">Kubernetes</a>
+                    <a href="portfolio" class="nav-link">Portfolio</a>
+                    <a href="contact" class="nav-link">Contact Me</a>
+                </div>
+                <div class="nav-toggle" id="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <div class="floating-shape shape-1"></div>
+            <div class="floating-shape shape-2"></div>
+            <div class="floating-shape shape-3"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="title-line">Hello,</span>
+                    <span class="title-line">welcome to</span>
+                    <span class="title-line highlight">Kubernetes ∞</span>
+                </h1>
+                <p class="hero-subtitle">
+                    AWS DevOps Engineer • AWS Community Builder • Docker Captain • Cloud Educator • YouTuber
+                </p>
+                <div class="hero-cta">
+                    <a href="javascript:void(0)" onclick="startKubernetes()" class="cta-primary">Start Learning</a>
+                    <a href="javascript:void(0)" onclick="viewK8sProjects()" class="cta-secondary">View Projects</a>
+                    <a href="contact" class="cta-contact">Contact Me</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kubernetes Concepts -->
+    <section id="k8s-concepts" class="k8s-concepts">
+        <div class="container">
+            <div class="section-header">
+                <h2>Kubernetes Core Concepts</h2>
+                <p>Understand the fundamental building blocks of Kubernetes</p>
+            </div>
+            
+            <div class="concepts-grid">
+                <div class="concept-card">
+                    <div class="concept-icon">📦</div>
+                    <h3>Pods</h3>
+                    <p>Smallest deployable units in Kubernetes, containing one or more containers</p>
+                    <div class="concept-features">
+                        <span>• Container grouping</span>
+                        <span>• Shared networking</span>
+                        <span>• Storage volumes</span>
+                        <span>• Lifecycle management</span>
+                    </div>
+                </div>
+
+                <div class="concept-card">
+                    <div class="concept-icon">🔄</div>
+                    <h3>Deployments</h3>
+                    <p>Manage the desired state for Pods and ReplicaSets, enabling rolling updates</p>
+                    <div class="concept-features">
+                        <span>• Rolling updates</span>
+                        <span>• Rollback capability</span>
+                        <span>• Scaling operations</span>
+                        <span>• Health monitoring</span>
+                    </div>
+                </div>
+
+                <div class="concept-card">
+                    <div class="concept-icon">🌐</div>
+                    <h3>Services</h3>
+                    <p>Abstract way to expose applications running on Pods, providing stable endpoints</p>
+                    <div class="concept-features">
+                        <span>• Load balancing</span>
+                        <span>• Service discovery</span>
+                        <span>• Multiple types</span>
+                        <span>• Port mapping</span>
+                    </div>
+                </div>
+
+                <div class="concept-card">
+                    <div class="concept-icon">💾</div>
+                    <h3>Volumes</h3>
+                    <p>Persistent storage solutions for Pods, surviving container restarts</p>
+                    <div class="concept-features">
+                        <span>• Persistent storage</span>
+                        <span>• Multiple types</span>
+                        <span>• Dynamic provisioning</span>
+                        <span>• Backup strategies</span>
+                    </div>
+                </div>
+
+                <div class="concept-card">
+                    <div class="concept-icon">🔐</div>
+                    <h3>ConfigMaps & Secrets</h3>
+                    <p>Manage configuration data and sensitive information separately from container images</p>
+                    <div class="concept-features">
+                        <span>• Configuration management</span>
+                        <span>• Secret handling</span>
+                        <span>• Environment variables</span>
+                        <span>• Security best practices</span>
+                    </div>
+                </div>
+
+                <div class="concept-card">
+                    <div class="concept-icon">📊</div>
+                    <h3>Namespaces</h3>
+                    <p>Virtual clusters within a physical cluster, providing isolation and resource management</p>
+                    <div class="concept-features">
+                        <span>• Resource isolation</span>
+                        <span>• Access control</span>
+                        <span>• Resource quotas</span>
+                        <span>• Multi-tenancy</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Official Kubernetes Documentation -->
+    <section class="k8s-documentation">
+        <div class="container">
+            <div class="section-header">
+                <h2>Official Kubernetes Documentation</h2>
+                <p>Access the complete, up-to-date Kubernetes documentation and resources</p>
+            </div>
+            
+            <div class="docs-grid">
+                <div class="doc-card">
+                    <div class="doc-icon">📚</div>
+                    <div class="doc-content">
+                        <h3>Kubernetes Documentation</h3>
+                        <p>Comprehensive guides, tutorials, and reference materials for all Kubernetes concepts</p>
+                        <div class="doc-features">
+                            <span>• Core concepts</span>
+                            <span>• API reference</span>
+                            <span>• Best practices</span>
+                            <span>• Troubleshooting</span>
+                        </div>
+                        <a href="https://kubernetes.io/docs/" target="_blank" class="btn btn-primary">
+                            Read Documentation
+                        </a>
+                    </div>
+                </div>
+
+                <div class="doc-card">
+                    <div class="doc-icon">🎯</div>
+                    <div class="doc-content">
+                        <h3>Kubernetes Tutorials</h3>
+                        <p>Step-by-step tutorials for common Kubernetes tasks and use cases</p>
+                        <div class="doc-features">
+                            <span>• Hello Minikube</span>
+                            <span>• Deploy apps</span>
+                            <span>• Scale apps</span>
+                            <span>• Update apps</span>
+                        </div>
+                        <a href="https://kubernetes.io/docs/tutorials/" target="_blank" class="btn btn-primary">
+                            Start Tutorials
+                        </a>
+                    </div>
+                </div>
+
+                <div class="doc-card">
+                    <div class="doc-icon">🔧</div>
+                    <div class="doc-content">
+                        <h3>Kubernetes Tools</h3>
+                        <p>Essential tools and utilities for Kubernetes development and operations</p>
+                        <div class="doc-features">
+                            <span>• kubectl</span>
+                            <span>• Dashboard</span>
+                            <span>• Helm</span>
+                            <span>• Operators</span>
+                        </div>
+                        <a href="https://kubernetes.io/docs/tasks/tools/" target="_blank" class="btn btn-primary">
+                            Explore Tools
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kubernetes Video Tutorials -->
+    <section id="k8s-projects" class="k8s-videos">
+        <div class="container">
+            <div class="section-header">
+                <h2>Kubernetes Video Tutorials</h2>
+                <p>Comprehensive video series covering all aspects of Kubernetes orchestration</p>
+            </div>
+            
+            <div class="videos-grid">
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="https://img.youtube.com/vi/X48VuDVv0do/maxresdefault.jpg" alt="Kubernetes in 4 Hours" class="thumbnail-image">
+                        <div class="play-overlay">
+                            <div class="play-icon">▶️</div>
+                        </div>
+                        <div class="video-duration">4:00:00</div>
+                    </div>
+                    <div class="video-content">
+                        <h3>Kubernetes in 4 Hours</h3>
+                        <p>Complete Kubernetes crash course covering all essential concepts and practical examples</p>
+                        <div class="video-meta">
+                            <span class="video-topic">Complete Course</span>
+                            <span class="video-level">All Levels</span>
+                        </div>
+                        <a href="https://youtu.be/X48VuDVv0do?si=7o9GD1qujtKwYMeH" 
+                           target="_blank" class="btn btn-primary">
+                            Watch Course
+                        </a>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="https://img.youtube.com/vi/80Ew_fsV4rM/maxresdefault.jpg" alt="Kubernetes Ingress" class="thumbnail-image">
+                        <div class="play-overlay">
+                            <div class="play-icon">▶️</div>
+                        </div>
+                        <div class="video-duration">45:30</div>
+                    </div>
+                    <div class="video-content">
+                        <h3>Kubernetes Ingress</h3>
+                        <p>Master Kubernetes Ingress controllers and traffic routing for external access</p>
+                        <div class="video-meta">
+                            <span class="video-topic">Networking</span>
+                            <span class="video-level">Intermediate</span>
+                        </div>
+                        <a href="https://youtu.be/80Ew_fsV4rM?si=aO5cGX53ksdKsM5D" 
+                           target="_blank" class="btn btn-primary">
+                            Watch Video
+                        </a>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="https://img.youtube.com/vi/ZqHhPwhvxk8/maxresdefault.jpg" alt="Kubernetes HPA" class="thumbnail-image">
+                        <div class="play-overlay">
+                            <div class="play-icon">▶️</div>
+                        </div>
+                        <div class="video-duration">38:15</div>
+                    </div>
+                    <div class="video-content">
+                        <h3>Kubernetes HPA</h3>
+                        <p>Learn Horizontal Pod Autoscaling for automatic scaling based on CPU and memory usage</p>
+                        <div class="video-meta">
+                            <span class="video-topic">Scaling</span>
+                            <span class="video-level">Advanced</span>
+                        </div>
+                        <a href="https://youtu.be/ZqHhPwhvxk8?si=W1lkEd0H4BSKXB3r" 
+                           target="_blank" class="btn btn-primary">
+                            Watch Video
+                        </a>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="https://img.youtube.com/vi/m7hGjJ6O2CI/maxresdefault.jpg" alt="KubeOne Setup" class="thumbnail-image">
+                        <div class="play-overlay">
+                            <div class="play-icon">▶️</div>
+                        </div>
+                        <div class="video-duration">52:45</div>
+                    </div>
+                    <div class="video-content">
+                        <h3>KubeOne Setup</h3>
+                        <p>Complete guide to setting up Kubernetes clusters using KubeOne for multi-cloud deployments</p>
+                        <div class="video-meta">
+                            <span class="video-topic">Cluster Setup</span>
+                            <span class="video-level">Advanced</span>
+                        </div>
+                        <a href="https://youtu.be/m7hGjJ6O2CI?si=u3pQaUmn56A3ZlFK" 
+                           target="_blank" class="btn btn-primary">
+                            Watch Video
+                        </a>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="https://img.youtube.com/vi/4gmy33oyywc/maxresdefault.jpg" alt="Minikube" class="thumbnail-image">
+                        <div class="play-overlay">
+                            <div class="play-icon">▶️</div>
+                        </div>
+                        <div class="video-duration">25:20</div>
+                    </div>
+                    <div class="video-content">
+                        <h3>Minikube</h3>
+                        <p>Get started with Kubernetes locally using Minikube for development and testing</p>
+                        <div class="video-meta">
+                            <span class="video-topic">Local Development</span>
+                            <span class="video-level">Beginner</span>
+                        </div>
+                        <a href="https://youtu.be/4gmy33oyywc?si=6TZYJqKFwastKnyL" 
+                           target="_blank" class="btn btn-primary">
+                            Watch Video
+                        </a>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="https://img.youtube.com/vi/WFGV6O5eqkc/maxresdefault.jpg" alt="Kubeadm Master Slave" class="thumbnail-image">
+                        <div class="play-overlay">
+                            <div class="play-icon">▶️</div>
+                        </div>
+                        <div class="video-duration">1:15:30</div>
+                    </div>
+                    <div class="video-content">
+                        <h3>Kubeadm Master Slave on Ubuntu 24.04</h3>
+                        <p>Step-by-step guide to setting up Kubernetes cluster with kubeadm on Ubuntu 24.04</p>
+                        <div class="video-meta">
+                            <span class="video-topic">Cluster Setup</span>
+                            <span class="video-level">Intermediate</span>
+                        </div>
+                        <a href="https://youtu.be/WFGV6O5eqkc?si=5CTwAeX9OlbudTHT" 
+                           target="_blank" class="btn btn-primary">
+                            Watch Video
+                        </a>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="https://img.youtube.com/vi/fB0P0mSgRdg/maxresdefault.jpg" alt="Kubeadm Upgrade" class="thumbnail-image">
+                        <div class="play-overlay">
+                            <div class="play-icon">▶️</div>
+                        </div>
+                        <div class="video-duration">41:15</div>
+                    </div>
+                    <div class="video-content">
+                        <h3>Kubeadm Upgrade</h3>
+                        <p>Learn how to upgrade your Kubernetes cluster safely using kubeadm</p>
+                        <div class="video-meta">
+                            <span class="video-topic">Maintenance</span>
+                            <span class="video-level">Advanced</span>
+                        </div>
+                        <a href="https://youtu.be/fB0P0mSgRdg?si=A4xzd8V8NwObGNAE" 
+                           target="_blank" class="btn btn-primary">
+                            Watch Video
+                        </a>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="https://img.youtube.com/vi/OCZriuQe08U/maxresdefault.jpg" alt="Shared Library Jenkins Kubernetes" class="thumbnail-image">
+                        <div class="play-overlay">
+                            <div class="play-icon">▶️</div>
+                        </div>
+                        <div class="video-duration">35:45</div>
+                    </div>
+                    <div class="video-content">
+                        <h3>Shared Library Jenkins Kubernetes Project</h3>
+                        <p>Build reusable Jenkins shared libraries for Kubernetes deployments and CI/CD workflows</p>
+                        <div class="video-meta">
+                            <span class="video-topic">CI/CD</span>
+                            <span class="video-level">Advanced</span>
+                        </div>
+                        <a href="https://youtu.be/OCZriuQe08U?si=UURA1tjhfAXsKBgK" 
+                           target="_blank" class="btn btn-primary">
+                            Watch Video
+                        </a>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="https://img.youtube.com/vi/PLdpzxOOAlwvJdsW6A0jCz_3VaANuFMLpc/maxresdefault.jpg" alt="30 Days Kubernetes Course" class="thumbnail-image">
+                        <div class="play-overlay">
+                            <div class="play-icon">▶️</div>
+                        </div>
+                        <div class="video-duration">30 Days</div>
+                    </div>
+                    <div class="video-content">
+                        <h3>30 Days Kubernetes Course</h3>
+                        <p>Comprehensive 30-day learning path covering all Kubernetes concepts and practical applications</p>
+                        <div class="video-meta">
+                            <span class="video-topic">Complete Course</span>
+                            <span class="video-level">All Levels</span>
+                        </div>
+                        <a href="https://youtube.com/playlist?list=PLdpzxOOAlwvJdsW6A0jCz_3VaANuFMLpc&si=RAiCwbaXaoJ9cFSx" 
+                           target="_blank" class="btn btn-primary">
+                            Start Course
+                        </a>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="https://img.youtube.com/vi/PLl4APkPHzsUUOkOv3i62UidrLmSB8DcGC/maxresdefault.jpg" alt="CKA 60 Days Course" class="thumbnail-image">
+                        <div class="play-overlay">
+                            <div class="play-icon">▶️</div>
+                        </div>
+                        <div class="video-duration">60 Days</div>
+                    </div>
+                    <div class="video-content">
+                        <h3>CKA 60 Days Course</h3>
+                        <p>Complete Certified Kubernetes Administrator (CKA) preparation course with hands-on labs</p>
+                        <div class="video-meta">
+                            <span class="video-topic">Certification</span>
+                            <span class="video-level">Advanced</span>
+                        </div>
+                        <a href="https://youtube.com/playlist?list=PLl4APkPHzsUUOkOv3i62UidrLmSB8DcGC&si=WBHe9g54jZoVETTL" 
+                           target="_blank" class="btn btn-primary">
+                            Start Course
+                        </a>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="https://img.youtube.com/vi/8CiVauzZk9E/maxresdefault.jpg" alt="Top 10 Kubernetes Risks" class="thumbnail-image">
+                        <div class="play-overlay">
+                            <div class="play-icon">▶️</div>
+                        </div>
+                        <div class="video-duration">15:30</div>
+                    </div>
+                    <div class="video-content">
+                        <h3>Top 10 Kubernetes Risks</h3>
+                        <p>Learn about the most critical security and operational risks in Kubernetes and how to mitigate them</p>
+                        <div class="video-meta">
+                            <span class="video-topic">Security</span>
+                            <span class="video-level">Intermediate</span>
+                        </div>
+                        <a href="https://youtu.be/8CiVauzZk9E?si=ITNkpNKWFnPlSsSj" 
+                           target="_blank" class="btn btn-primary">
+                            Watch Video
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kubernetes Commands -->
+    <section class="k8s-commands">
+        <div class="container">
+            <div class="section-header">
+                <h2>Essential Kubernetes Commands</h2>
+                <p>Master the most important kubectl commands for daily operations</p>
+            </div>
+            
+            <div class="commands-grid">
+                <div class="command-category">
+                    <h3>📦 Pod Management</h3>
+                    <div class="command-list">
+                        <div class="command-item">
+                            <code>kubectl get pods</code>
+                            <span class="command-desc">List all pods</span>
+                        </div>
+                        <div class="command-item">
+                            <code>kubectl describe pod pod-name</code>
+                            <span class="command-desc">Get detailed pod info</span>
+                        </div>
+                        <div class="command-item">
+                            <code>kubectl logs pod-name</code>
+                            <span class="command-desc">View pod logs</span>
+                        </div>
+                        <div class="command-item">
+                            <code>kubectl exec -it pod-name -- bash</code>
+                            <span class="command-desc">Access pod shell</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="command-category">
+                    <h3>🔄 Deployment Management</h3>
+                    <div class="command-list">
+                        <div class="command-item">
+                            <code>kubectl get deployments</code>
+                            <span class="command-desc">List deployments</span>
+                        </div>
+                        <div class="command-item">
+                            <code>kubectl scale deployment name --replicas=3</code>
+                            <span class="command-desc">Scale deployment</span>
+                        </div>
+                        <div class="command-item">
+                            <code>kubectl rollout status deployment/name</code>
+                            <span class="command-desc">Check rollout status</span>
+                        </div>
+                        <div class="command-item">
+                            <code>kubectl rollout undo deployment/name</code>
+                            <span class="command-desc">Rollback deployment</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="command-category">
+                    <h3>🌐 Service & Networking</h3>
+                    <div class="command-list">
+                        <div class="command-item">
+                            <code>kubectl get services</code>
+                            <span class="command-desc">List services</span>
+                        </div>
+                        <div class="command-item">
+                            <code>kubectl port-forward service/name 8080:80</code>
+                            <span class="command-desc">Port forward service</span>
+                        </div>
+                        <div class="command-item">
+                            <code>kubectl get ingress</code>
+                            <span class="command-desc">List ingress rules</span>
+                        </div>
+                        <div class="command-item">
+                            <code>kubectl get nodes</code>
+                            <span class="command-desc">List cluster nodes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Orchestrate Your Containers?</h2>
+                <p>Start your Kubernetes journey with hands-on projects and expert guidance</p>
+                <div class="cta-buttons">
+                    <button class="cta-primary" onclick="startKubernetes()">Start Learning K8s</button>
+                    <button class="cta-secondary" onclick="viewK8sProjects()">View K8s Projects</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Ajay Kumar Yegireddi</h4>
+                    <p>AWS DevOps Engineer and Cloud Educator helping others master cloud technologies.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index">Home</a></li>
+                        <li><a href="aws-practitioner">AWS Learning</a></li>
+                        <li><a href="devsecops">DevSecOps</a></li>
+                        <li><a href="portfolio">Portfolio</a></li>
+                        <li><a href="contact">Contact Me</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: ajay@mrcloudbook.com</p>
+                    <p>Created with ❤️ for the tech community</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Ajay Kumar Yegireddi. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Kubernetes-specific functions
+        function startKubernetes() {
+            // Smooth scroll to videos section
+            document.getElementById('k8s-projects').scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+        }
+
+        function viewK8sProjects() {
+            // Smooth scroll to videos section
+            document.getElementById('k8s-projects').scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+        }
+    </script>
+</body>
+</html> 

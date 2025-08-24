@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docker Mastery - Ajay Kumar Yegireddi</title>
+    <meta name="description" content="Master Docker containerization with hands-on projects, best practices, and real-world applications.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="nav-brand">
+                    <a href="index">
+                        <div class="brand-icon">☁️</div>
+                        <span>ONE FOR ALL</span>
+                    </a>
+                </div>
+                <div class="nav-menu">
+                    <a href="index" class="nav-link">Home</a>
+                    <a href="aws-practitioner" class="nav-link">AWS Learning</a>
+                    <a href="ai-learning" class="nav-link">AI & Webinars</a>
+                    <a href="devsecops" class="nav-link">DevSecOps</a>
+                    <a href="docker" class="nav-link active">Docker</a>
+                    <a href="kubernetes" class="nav-link">Kubernetes</a>
+                    <a href="portfolio" class="nav-link">Portfolio</a>
+                    <a href="contact" class="nav-link">Contact Me</a>
+                </div>
+                <div class="nav-toggle" id="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <div class="floating-shape shape-1"></div>
+            <div class="floating-shape shape-2"></div>
+            <div class="floating-shape shape-3"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="title-line">Hello,</span>
+                    <span class="title-line">welcome to</span>
+                    <span class="title-line highlight">Docker Learning ∞</span>
+                </h1>
+                <p class="hero-subtitle">
+                    AWS DevOps Engineer • AWS Community Builder • Docker Captain • Cloud Educator • YouTuber
+                </p>
+                <div class="hero-cta">
+                    <a href="#docker-projects" class="cta-primary">Start Learning</a>
+                    <a href="#docker-blogs" class="cta-secondary">View Projects</a>
+                    <a href="contact" class="cta-contact">Contact Me</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Docker Fundamentals -->
+    <section id="docker-fundamentals" class="docker-fundamentals">
+        <div class="container">
+            <div class="section-header">
+                <h2>Docker Fundamentals</h2>
+                <p>Master the core concepts that power modern containerization</p>
+            </div>
+            
+            <div class="fundamentals-grid">
+                <div class="fundamental-card">
+                    <div class="card-icon">📦</div>
+                    <h3>Containers</h3>
+                    <p>Lightweight, isolated environments that package applications and dependencies</p>
+                    <ul class="card-features">
+                        <li>Portability across environments</li>
+                        <li>Consistent runtime behavior</li>
+                        <li>Resource isolation</li>
+                        <li>Fast deployment</li>
+                    </ul>
+                </div>
+
+                <div class="fundamental-card">
+                    <div class="card-icon">🖼️</div>
+                    <h3>Images</h3>
+                    <p>Immutable templates used to create containers with specific configurations</p>
+                    <ul class="card-features">
+                        <li>Layered architecture</li>
+                        <li>Version control</li>
+                        <li>Registry management</li>
+                        <li>Optimization techniques</li>
+                    </ul>
+                </div>
+
+                <div class="fundamental-card">
+                    <div class="card-icon">🏗️</div>
+                    <h3>Dockerfile</h3>
+                    <p>Text-based instructions to build custom Docker images automatically</p>
+                    <ul class="card-features">
+                        <li>Multi-stage builds</li>
+                        <li>Best practices</li>
+                        <li>Security considerations</li>
+                        <li>Optimization strategies</li>
+                    </ul>
+                </div>
+
+                <div class="fundamental-card">
+                    <div class="card-icon">🔗</div>
+                    <h3>Networking</h3>
+                    <p>Connect containers and manage communication between services</p>
+                    <ul class="card-features">
+                        <li>Bridge networks</li>
+                        <li>Host networking</li>
+                        <li>Custom networks</li>
+                        <li>Service discovery</li>
+                    </ul>
+                </div>
+
+                <div class="fundamental-card">
+                    <div class="card-icon">🤖</div>
+                    <h3>Model Runner</h3>
+                    <p>Deploy and serve machine learning models using Docker containers</p>
+                    <ul class="card-features">
+                        <li>Fast model serving</li>
+                        <li>Scalable architecture</li>
+                        <li>Secure isolation</li>
+                        <li>Monitoring & observability</li>
+                    </ul>
+                </div>
+
+                <div class="fundamental-card">
+                    <div class="card-icon">⚡</div>
+                    <h3>Docker Offload</h3>
+                    <p>Optimize resource utilization with intelligent workload distribution</p>
+                    <ul class="card-features">
+                        <li>Dynamic resource allocation</li>
+                        <li>Cost optimization</li>
+                        <li>Load balancing</li>
+                        <li>Edge computing support</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Docker Video Tutorials -->
+    <section id="docker-projects" class="docker-videos">
+        <div class="container">
+            <div class="section-header">
+                <h2>Docker Video Tutorials</h2>
+                <p>Comprehensive video series covering all aspects of Docker containerization</p>
+            </div>
+            
+            <div class="videos-grid">
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="https://img.youtube.com/vi/RqTEHSBrYFw/maxresdefault.jpg" alt="Docker Full Course Thumbnail" class="thumbnail-image">
+                        <div class="play-overlay">
+                            <div class="play-icon">▶️</div>
+                        </div>
+                        <div class="video-duration">2:15:30</div>
+                    </div>
+                    <div class="video-content">
+                        <h3>Docker Full Course</h3>
+                        <p>Complete Docker tutorial from basics to advanced concepts and real-world applications</p>
+                        <div class="video-meta">
+                            <span class="video-topic">Complete Course</span>
+                            <span class="video-level">All Levels</span>
+                        </div>
+                        <a href="https://youtu.be/RqTEHSBrYFw?si=M4x8Afr5pjI9e3q1" 
+                           target="_blank" class="btn btn-primary">
+                            Watch Course
+                        </a>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="https://img.youtube.com/vi/GOgfQxDPaDw/maxresdefault.jpg" alt="Docker Model Runner Thumbnail" class="thumbnail-image">
+                        <div class="play-overlay">
+                            <div class="play-icon">▶️</div>
+                        </div>
+                        <div class="video-duration">45:20</div>
+                    </div>
+                    <div class="video-content">
+                        <h3>Docker Model Runner</h3>
+                        <p>Learn how to deploy and serve machine learning models using Docker containers</p>
+                        <div class="video-meta">
+                            <span class="video-topic">AI/ML</span>
+                            <span class="video-level">Advanced</span>
+                        </div>
+                        <a href="https://youtu.be/GOgfQxDPaDw?si=2hU-y4IuZNxhvSt3" 
+                           target="_blank" class="btn btn-primary">
+                            Watch Video
+                        </a>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="https://img.youtube.com/vi/m42O9ke6fzE/maxresdefault.jpg" alt="Docker Offload Thumbnail" class="thumbnail-image">
+                        <div class="play-overlay">
+                            <div class="play-icon">▶️</div>
+                        </div>
+                        <div class="video-duration">38:15</div>
+                    </div>
+                    <div class="video-content">
+                        <h3>Docker Offload</h3>
+                        <p>Master intelligent resource management and workload distribution with Docker</p>
+                        <div class="video-meta">
+                            <span class="video-topic">Resource Management</span>
+                            <span class="video-level">Advanced</span>
+                        </div>
+                        <a href="https://youtu.be/m42O9ke6fzE?si=2Jo7NOoRykpq4aVq" 
+                           target="_blank" class="btn btn-primary">
+                            Watch Video
+                        </a>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="https://img.youtube.com/vi/8vXoMqWgbQQ/maxresdefault.jpg" alt="Docker Best Practices Thumbnail" class="thumbnail-image">
+                        <div class="play-overlay">
+                            <div class="play-icon">▶️</div>
+                        </div>
+                        <div class="video-duration">52:45</div>
+                    </div>
+                    <div class="video-content">
+                        <h3>Docker Best Practices</h3>
+                        <p>Essential Docker best practices for production-ready containerized applications</p>
+                        <div class="video-meta">
+                            <span class="video-topic">Best Practices</span>
+                            <span class="video-level">Intermediate</span>
+                        </div>
+                        <a href="https://youtu.be/8vXoMqWgbQQ?si=-hfD7DZuI4uG8CBw" 
+                           target="_blank" class="btn btn-primary">
+                            Watch Video
+                        </a>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="https://img.youtube.com/vi/t779DVjCKCs/maxresdefault.jpg" alt="Docker Image Practices Thumbnail" class="thumbnail-image">
+                        <div class="play-overlay">
+                            <div class="play-icon">▶️</div>
+                        </div>
+                        <div class="video-duration">41:30</div>
+                    </div>
+                    <div class="video-content">
+                        <h3>Docker Image Practices</h3>
+                        <p>Optimize Docker images with multi-stage builds and security best practices</p>
+                        <div class="video-meta">
+                            <span class="video-topic">Image Optimization</span>
+                            <span class="video-level">Intermediate</span>
+                        </div>
+                        <a href="https://youtu.be/t779DVjCKCs?si=q0mJc9ce3n1vg177" 
+                           target="_blank" class="btn btn-primary">
+                            Watch Video
+                        </a>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="https://img.youtube.com/vi/KINjI1tlo2w/maxresdefault.jpg" alt="Docker Security Thumbnail" class="thumbnail-image">
+                        <div class="play-overlay">
+                            <div class="play-icon">▶️</div>
+                        </div>
+                        <div class="video-duration">35:20</div>
+                    </div>
+                    <div class="video-content">
+                        <h3>How to Secure Docker Containers</h3>
+                        <p>Implement comprehensive security measures for Docker containers in production</p>
+                        <div class="video-meta">
+                            <span class="video-topic">Security</span>
+                            <span class="video-level">Advanced</span>
+                        </div>
+                        <a href="https://youtu.be/KINjI1tlo2w?si=FC3hBp0YAeBWPc8d" 
+                           target="_blank" class="btn btn-primary">
+                            Watch Video
+                        </a>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="https://img.youtube.com/vi/b_euX_M82uI/maxresdefault.jpg" alt="Container Security Thumbnail" class="thumbnail-image">
+                        <div class="play-overlay">
+                            <div class="play-icon">▶️</div>
+                        </div>
+                        <div class="video-duration">28:45</div>
+                    </div>
+                    <div class="video-content">
+                        <h3>Container Security</h3>
+                        <p>Advanced container security techniques and vulnerability management</p>
+                        <div class="video-meta">
+                            <span class="video-topic">Security</span>
+                            <span class="video-level">Advanced</span>
+                        </div>
+                        <a href="https://youtu.be/b_euX_M82uI?si=nR8wm7JpsKQ7tH1Y" 
+                           target="_blank" class="btn btn-primary">
+                            Watch Video
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Docker Blogs & Resources -->
+    <section id="docker-blogs" class="docker-blogs">
+        <div class="container">
+            <div class="section-header">
+                <h2>Docker Blogs & Resources</h2>
+                <p>In-depth articles, tutorials, and open-source projects from the Docker community</p>
+            </div>
+            
+            <div class="blogs-grid">
+                <div class="blog-card">
+                    <div class="blog-header">
+                        <div class="blog-category">AI & Docker</div>
+                        <div class="blog-icon">🤖</div>
+                    </div>
+                    <div class="blog-content">
+                        <h3>How to Run Docker Model Runner on Ubuntu 24.04</h3>
+                        <p>Learn how to set up and run AI models using Docker Model Runner on Ubuntu 24.04. Complete guide with step-by-step instructions.</p>
+                        <div class="blog-meta">
+                            <span class="blog-date">July 11, 2025</span>
+                            <span class="blog-read-time">8 min read</span>
+                        </div>
+                        <a href="https://mrcloudbook.com/how-to-run-docker-model-runner-on-ubuntu-24-04/" 
+                           target="_blank" class="btn btn-primary">
+                            Read Article
+                        </a>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <div class="blog-header">
+                        <div class="blog-category">Docker AI</div>
+                        <div class="blog-icon">⚡</div>
+                    </div>
+                    <div class="blog-content">
+                        <h3>How to Install Docker AI on Ubuntu 24.04</h3>
+                        <p>Complete guide to installing and configuring Docker AI on Ubuntu 24.04. Set up your AI development environment with Docker.</p>
+                        <div class="blog-meta">
+                            <span class="blog-date">June 15, 2025</span>
+                            <span class="blog-read-time">6 min read</span>
+                        </div>
+                        <a href="https://mrcloudbook.com/how-to-install-docker-ai-on-ubuntu-24-04/" 
+                           target="_blank" class="btn btn-primary">
+                            Read Article
+                        </a>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <div class="blog-header">
+                        <div class="blog-category">Best Practices</div>
+                        <div class="blog-icon">📚</div>
+                    </div>
+                    <div class="blog-content">
+                        <h3>How to Achieve Zero Downtime in Docker</h3>
+                        <p>Master the techniques for achieving zero-downtime deployments with Docker. Learn blue-green deployments and rolling updates.</p>
+                        <div class="blog-meta">
+                            <span class="blog-date">July 22, 2025</span>
+                            <span class="blog-read-time">10 min read</span>
+                        </div>
+                        <a href="https://mrcloudbook.com/how-to-achieve-zero-downtime-in-docker/" 
+                           target="_blank" class="btn btn-primary">
+                            Read Article
+                        </a>
+                    </div>
+                </div>
+
+                <div class="blog-card featured">
+                    <div class="blog-header">
+                        <div class="blog-category">Open Source</div>
+                        <div class="blog-icon">🐙</div>
+                        <div class="featured-badge">Featured</div>
+                    </div>
+                    <div class="blog-content">
+                        <h3>Docker AI - Open Source Project</h3>
+                        <p>Our open-source Docker AI project that simplifies AI model deployment and management using Docker containers.</p>
+                        <div class="blog-meta">
+                            <span class="blog-tech">Python</span>
+                            <span class="blog-tech">Docker</span>
+                            <span class="blog-tech">AI/ML</span>
+                        </div>
+                        <a href="https://github.com/Aj7Ay/docker-ai.git" 
+                           target="_blank" class="btn btn-primary">
+                            View on GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Docker Commands Cheat Sheet -->
+    <section class="docker-commands">
+        <div class="container">
+            <div class="section-header">
+                <h2>Essential Docker Commands</h2>
+                <p>Master the most important Docker commands for daily operations</p>
+            </div>
+            
+            <div class="commands-grid">
+                <div class="command-category">
+                    <h3>🖼️ Image Management</h3>
+                    <div class="command-list">
+                        <div class="command-item">
+                            <code>docker build -t myapp:latest .</code>
+                            <span class="command-desc">Build image from Dockerfile</span>
+                        </div>
+                        <div class="command-item">
+                            <code>docker images</code>
+                            <span class="command-desc">List all images</span>
+                        </div>
+                        <div class="command-item">
+                            <code>docker rmi image_name</code>
+                            <span class="command-desc">Remove image</span>
+                        </div>
+                        <div class="command-item">
+                            <code>docker pull image_name</code>
+                            <span class="command-desc">Pull image from registry</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="command-category">
+                    <h3>📦 Container Management</h3>
+                    <div class="command-list">
+                        <div class="command-item">
+                            <code>docker run -d image_name</code>
+                            <span class="command-desc">Run container in background</span>
+                        </div>
+                        <div class="command-item">
+                            <code>docker ps -a</code>
+                            <span class="command-desc">List all containers</span>
+                        </div>
+                        <div class="command-item">
+                            <code>docker stop container_id</code>
+                            <span class="command-desc">Stop running container</span>
+                        </div>
+                        <div class="command-item">
+                            <code>docker exec -it container_id bash</code>
+                            <span class="command-desc">Access container shell</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="command-category">
+                    <h3>🔗 Network & Volumes</h3>
+                    <div class="command-list">
+                        <div class="command-item">
+                            <code>docker network ls</code>
+                            <span class="command-desc">List networks</span>
+                        </div>
+                        <div class="command-item">
+                            <code>docker volume create my_volume</code>
+                            <span class="command-desc">Create volume</span>
+                        </div>
+                        <div class="command-item">
+                            <code>docker-compose up -d</code>
+                            <span class="command-desc">Start services</span>
+                        </div>
+                        <div class="command-item">
+                            <code>docker system prune</code>
+                            <span class="command-desc">Clean up system</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Containerize Your Applications?</h2>
+                <p>Start your Docker journey with hands-on projects and expert guidance</p>
+                <div class="cta-buttons">
+                    <a href="https://www.youtube.com/@mr.cloudbook" target="_blank" class="cta-primary">Start Learning Docker</a>
+                    <a href="#docker-blogs" class="cta-secondary">View Docker Projects</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Ajay Kumar Yegireddi</h4>
+                    <p>AWS DevOps Engineer and Cloud Educator helping others master cloud technologies.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index">Home</a></li>
+                        <li><a href="aws-practitioner">AWS Learning</a></li>
+                        <li><a href="devsecops">DevSecOps</a></li>
+                        <li><a href="portfolio">Portfolio</a></li>
+                        <li><a href="contact">Contact Me</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: ajay@mrcloudbook.com</p>
+                    <p>Created with ❤️ for the tech community</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Ajay Kumar Yegireddi. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Docker-specific functions
+        function startDocker() {
+            alert('Starting your Docker journey! You\'ll get access to all Docker projects and learning materials.');
+        }
+
+        function viewDockerProjects() {
+            alert('Viewing all Docker projects with detailed guides, code, and video tutorials.');
+        }
+    </script>
+</body>
+</html> 

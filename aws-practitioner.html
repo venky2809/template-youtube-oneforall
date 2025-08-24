@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Cloud Practitioner Learning - Ajay Kumar Yegireddi</title>
+    <meta name="description" content="Master AWS Cloud Practitioner certification with comprehensive learning resources, practice questions, and hands-on projects.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Satoshi:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+
+    <script src="aws-questions.js"></script>
+</head>
+<body class="aws-page">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+            <div class="nav-brand">
+                    <a href="index">
+                        <div class="brand-icon">☁️</div>
+                        <span>ONE FOR ALL</span>
+                    </a>
+                </div>
+                                <div class="nav-menu">
+                    <a href="index" class="nav-link">Home</a>
+                    <a href="aws-practitioner" class="nav-link active">AWS Learning</a>
+                    <a href="ai-learning" class="nav-link">AI & Webinars</a>
+                    <a href="devsecops" class="nav-link">DevSecOps</a>
+                    <a href="docker" class="nav-link">Docker</a>
+                    <a href="kubernetes" class="nav-link">Kubernetes</a>
+                    <a href="portfolio" class="nav-link">Portfolio</a>
+                    <a href="contact" class="nav-link">Contact Me</a>
+                </div>
+                                        <div class="nav-toggle" id="nav-toggle">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+            </div>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <div class="floating-shape shape-1"></div>
+            <div class="floating-shape shape-2"></div>
+            <div class="floating-shape shape-3"></div>
+                </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="title-line">Hello,</span>
+                    <span class="title-line">welcome to</span>
+                    <span class="title-line highlight">AWS Learning ∞</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Master AWS Cloud Practitioner concepts with 500+ practice questions, interactive learning paths, and real-world scenarios
+                </p>
+                <div class="hero-cta">
+                    <a href="#learning-resources" class="cta-primary">Start Learning</a>
+                    <a href="#learning-paths" class="cta-secondary">Practice Exams</a>
+                    <a href="contact" class="cta-contact">Contact Me</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning Resources -->
+    <section id="learning-resources" class="learning-resources">
+        <div class="container">
+            <div class="section-header">
+                <h2>Learning Resources</h2>
+                <p>Curated resources to help you master AWS Cloud Practitioner concepts</p>
+            </div>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="card-icon">🎥</div>
+                    <h3>YouTube Playlist</h3>
+                    <p>Comprehensive AWS Cloud Practitioner video series with practical examples and real-world scenarios</p>
+                    <a href="https://youtube.com/playlist?list=PLt1SIbA8guuvfvUDVLpJepmbnYpOfYCIB&si=C-w6f7sBkbSrRS6O" target="_blank" class="btn">Watch Playlist</a>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="card-icon">🎬</div>
+                    <h3>Complete Course Video</h3>
+                    <p>In-depth AWS Cloud Practitioner course covering all domains with hands-on demonstrations</p>
+                    <a href="https://www.youtube.com/watch?v=NhDYbskXRgc&t=8523s" target="_blank" class="btn">Watch Course</a>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="card-icon">🎓</div>
+                    <h3>Udemy Course</h3>
+                    <p>Professional AWS Cloud Practitioner course with certificate and lifetime access</p>
+                    <a href="https://www.udemy.com/course/aws-certified-cloud-practitioner-new/?couponCode=KEEPLEARNING" target="_blank" class="btn">Enroll Now</a>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="card-icon">📚</div>
+                    <h3>GitHub Repository</h3>
+                    <p>Open source study notes, practice exams, and comprehensive AWS resources</p>
+                    <a href="https://github.com/kananinirav/AWS-Certified-Cloud-Practitioner-Notes" target="_blank" class="btn">View Repository</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning Paths -->
+    <section id="learning-paths" class="learning-paths">
+        <div class="container">
+            <div class="section-header">
+                <h2>Choose Your Learning Path</h2>
+                <p>Select the learning mode that best fits your study schedule and goals. All modes use our comprehensive question bank of 500+ AWS Cloud Practitioner questions.</p>
+            </div>
+            
+            <div class="paths-grid">
+                <div class="path-card practice-mode">
+                    <div class="path-icon">📝</div>
+                    <h3>Practice Mode</h3>
+                        <p>Master AWS concepts at your own pace with detailed explanations</p>
+                    <ul class="path-features">
+                        <li>10 questions per session</li>
+                        <li>Detailed explanations</li>
+                        <li>No time pressure</li>
+                        <li>Track your progress</li>
+                    </ul>
+                    <button class="path-btn" onclick="startPractice()">Start Practice</button>
+                </div>
+                
+                <div class="path-card timed-quiz">
+                    <div class="path-icon">⏱️</div>
+                    <h3>Timed Quiz</h3>
+                        <p>Challenge yourself with a timed quiz to simulate exam conditions</p>
+                    <ul class="path-features">
+                        <li>20 random questions</li>
+                        <li>30-minute time limit</li>
+                        <li>Real exam pressure</li>
+                        <li>Performance analytics</li>
+                    </ul>
+                    <button class="path-btn" onclick="startTimedQuiz()">Start Timed Quiz</button>
+                </div>
+                
+                <div class="path-card full-exam">
+                    <div class="path-icon">🎯</div>
+                    <h3>Full Exam</h3>
+                        <p>Take a complete exam simulation to test your readiness</p>
+                    <ul class="path-features">
+                        <li>65 questions</li>
+                        <li>90-minute limit</li>
+                        <li>Real exam format</li>
+                        <li>Comprehensive review</li>
+                    </ul>
+                    <button class="path-btn" onclick="startFullExam()">Start Full Exam</button>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+                <!-- Quiz Interface -->
+    <div id="quiz-interface" class="quiz-interface" style="display: none;">
+        <div class="container">
+                <div class="quiz-header">
+                <h2>AWS Cloud Practitioner Quiz</h2>
+                <p>Test your knowledge with our comprehensive question bank</p>
+            </div>
+            <div id="question-container"></div>
+            <div id="question-overview" class="question-overview" style="display: none;"></div>
+        </div>
+    </div>
+
+    <!-- Quiz Results -->
+    <div id="quiz-results" class="quiz-results" style="display: none;">
+        <div class="quiz-results-wrapper">
+            <!-- Results will be populated by JavaScript -->
+        </div>
+    </div>
+
+    <!-- Clear Separation -->
+    <div class="section-separator"></div>
+
+    <!-- Call to Action -->
+    <section id="cta-section" class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Start Your AWS Journey?</h2>
+                <p>Join thousands of successful AWS Cloud Practitioner certified professionals</p>
+                <div class="cta-buttons">
+                    <button class="cta-primary" onclick="startLearning()">Enroll in Udemy Course</button>
+                    <button class="cta-secondary" onclick="viewSyllabus()">Download Exam Guide</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Ajay Kumar Yegireddi</h4>
+                    <p>AWS DevOps Engineer and Cloud Educator helping others master cloud technologies.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index">Home</a></li>
+                        <li><a href="devsecops">DevSecOps</a></li>
+                        <li><a href="ai-learning">AI & Webinars</a></li>
+                        <li><a href="portfolio">Portfolio</a></li>
+                        <li><a href="contact">Contact Me</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: ajay@mrcloudbook.com</p>
+                    <p>Created with ❤️ for the tech community</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Ajay Kumar Yegireddi. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Quiz functionality
+        let currentQuiz = null;
+        let currentQuestionIndex = 0;
+        let quizScore = 0;
+        let quizTimer = null;
+        let timeRemaining = 0;
+        
+        // Test if AWSQuizEngine is available
+        console.log('Checking if AWSQuizEngine is available...');
+        console.log('typeof AWSQuizEngine:', typeof AWSQuizEngine);
+        if (typeof AWSQuizEngine === 'undefined') {
+            console.error('AWSQuizEngine is not defined! Check if aws-questions.js is loading properly.');
+        } else {
+            console.log('AWSQuizEngine is available!');
+        }
+        
+
+
+        // Learning path functions - now with actual quiz functionality
+        function startPractice() {
+            console.log('Practice button clicked!');
+            try {
+                console.log('Practice mode started');
+                startQuiz('practice', 10);
+            } catch (error) {
+                console.error('Error starting practice mode:', error);
+                alert('Error starting quiz: ' + error.message);
+            }
+        }
+
+        function startTimedQuiz() {
+            console.log('Timed quiz button clicked!');
+            try {
+                console.log('Timed quiz started');
+                startQuiz('timed', 20);
+            } catch (error) {
+                console.error('Error starting timed quiz:', error);
+                alert('Error starting quiz: ' + error.message);
+            }
+        }
+
+        function startFullExam() {
+            console.log('Full exam button clicked!');
+            try {
+                console.log('Full exam started');
+                startQuiz('full', 65);
+            } catch (error) {
+                console.error('Error starting full exam:', error);
+                alert('Error starting quiz: ' + error.message);
+            }
+        }
+
+        function startQuiz(mode, questionCount) {
+            console.log('Starting quiz with mode:', mode, 'and count:', questionCount);
+            
+            try {
+                // Hide learning paths section
+                document.getElementById('learning-paths').style.display = 'none';
+                console.log('Learning paths hidden');
+                
+                // Show quiz interface
+                document.getElementById('quiz-interface').style.display = 'block';
+                console.log('Quiz interface shown');
+                
+                // Initialize quiz
+                currentQuiz = new AWSQuizEngine();
+                console.log('Quiz engine created:', currentQuiz);
+                
+                const firstQuestion = currentQuiz.startQuiz(mode, questionCount);
+                console.log('First question:', firstQuestion);
+                
+                currentQuestionIndex = 0; // Start from question 0 (first question)
+                quizScore = 0;
+                
+                // Set timer for timed quizzes
+                if (mode === 'timed') {
+                    timeRemaining = 30 * 60; // 30 minutes
+                    startTimer();
+                } else if (mode === 'full') {
+                    timeRemaining = 90 * 60; // 90 minutes
+                    startTimer();
+                }
+                
+                console.log('About to display question. Current index:', currentQuestionIndex);
+                displayQuestion();
+            } catch (error) {
+                console.error('Error in startQuiz:', error);
+                alert('Error starting quiz: ' + error.message);
+            }
+        }
+
+        function displayQuestion() {
+            console.log('Displaying question. Current index:', currentQuestionIndex);
+            console.log('Current quiz:', currentQuiz);
+            console.log('Current questions array:', currentQuiz.currentQuestions);
+            
+            try {
+                const question = currentQuiz.getCurrentQuestion();
+                console.log('Question retrieved:', question);
+                
+                if (!question) {
+                    console.log('No question found, ending quiz');
+                    endQuiz();
+                    return;
+                }
+
+            const questionContainer = document.getElementById('question-container');
+            questionContainer.innerHTML = `
+                <div class="question-header">
+                    <h3>Question ${currentQuestionIndex + 1} of ${question.totalQuestions}</h3>
+                    <div class="question-domain">${question.domain}</div>
+                    ${currentQuiz.quizMode !== 'practice' ? `<div class="timer">Time: <span id="time-display">${formatTime(timeRemaining)}</span></div>` : ''}
+                </div>
+                <div class="question-text">
+                    <p>${question.question}</p>
+                    <div class="question-tips">
+                        <button class="tip-toggle" onclick="toggleTips()">💡 Show Tips</button>
+                        <div class="tips-content" style="display: none;">
+                            <h4>💡 Helpful Tips:</h4>
+                            <ul>
+                                <li>Read the question carefully - look for keywords like "NOT", "MOST", "LEAST"</li>
+                                <li>Eliminate obviously wrong answers first</li>
+                                <li>Consider AWS best practices and security principles</li>
+                                <li>Think about cost optimization and scalability</li>
+                                <li>Remember the shared responsibility model</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="question-options">
+                    ${question.options.map((option, index) => `
+                        <button class="option-btn" onclick="selectOption(${index})">
+                            ${String.fromCharCode(65 + index)}. ${option}
+                        </button>
+                    `).join('')}
+                </div>
+                <div class="question-actions">
+                    <button class="btn btn-secondary" onclick="markForReview()" ${question.markedForReview ? 'disabled' : ''}>
+                        ${question.markedForReview ? '✓ Marked for Review' : '📝 Mark for Review'}
+                    </button>
+                    <button class="btn btn-secondary" onclick="skipQuestion()">⏭️ Skip</button>
+                </div>
+                <div class="question-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: ${((currentQuestionIndex + 1) / question.totalQuestions) * 100}%"></div>
+                    </div>
+                    <span>${currentQuestionIndex + 1} / ${question.totalQuestions}</span>
+                </div>
+                <div class="question-navigation">
+                    <button class="btn btn-secondary" onclick="previousQuestion()" ${currentQuestionIndex === 0 ? 'disabled' : ''}>
+                        ← Previous
+                    </button>
+                    <button class="btn btn-primary" onclick="nextQuestion()" ${currentQuestionIndex === question.totalQuestions - 1 ? 'disabled' : ''}>
+                        ${currentQuestionIndex === question.totalQuestions - 1 ? 'Finish Quiz' : 'Next →'}
+                    </button>
+                    <button class="btn btn-secondary" onclick="toggleQuestionOverview()">📋 Overview</button>
+                    <button class="btn btn-danger" onclick="endQuizEarly()">🏁 End Quiz</button>
+                </div>
+            `;
+            } catch (error) {
+                console.error('Error in displayQuestion:', error);
+                alert('Error displaying question: ' + error.message);
+            }
+        }
+
+        function toggleQuestionOverview() {
+            const overviewPanel = document.getElementById('question-overview');
+            if (overviewPanel.style.display === 'none' || !overviewPanel.style.display) {
+                showQuestionOverview();
+            } else {
+                overviewPanel.style.display = 'none';
+            }
+        }
+
+        function showQuestionOverview() {
+            const overviewPanel = document.getElementById('question-overview');
+            const questions = currentQuiz.currentQuestions;
+            
+            overviewPanel.innerHTML = `
+                <div class="overview-header">
+                    <h3>Question Overview</h3>
+                    <button class="btn btn-secondary" onclick="toggleQuestionOverview()">✕ Close</button>
+                </div>
+                <div class="overview-grid">
+                    ${questions.map((q, index) => {
+                        const status = q.answered ? 'answered' : q.skipped ? 'skipped' : 'unanswered';
+                        const isCurrent = index === currentQuestionIndex;
+                        return `
+                            <button class="overview-item ${status} ${isCurrent ? 'current' : ''}" 
+                                    onclick="goToQuestion(${index + 1})">
+                                ${index + 1}
+                                ${q.markedForReview ? '📝' : ''}
+                            </button>
+                        `;
+                    }).join('')}
+                </div>
+                <div class="overview-legend">
+                    <span class="legend-item"><span class="legend-dot answered"></span> Answered</span>
+                    <span class="legend-item"><span class="legend-dot skipped"></span> Skipped</span>
+                    <span class="legend-item"><span class="legend-dot unanswered"></span> Unanswered</span>
+                    <span class="legend-item"><span class="legend-dot current"></span> Current</span>
+                </div>
+            `;
+            overviewPanel.style.display = 'block';
+        }
+
+        function goToQuestion(questionNumber) {
+            currentQuestionIndex = questionNumber - 1; // Convert to 0-based index
+            // Update quiz engine's internal index (0-based)
+            currentQuiz.currentQuestionIndex = currentQuestionIndex;
+            displayQuestion();
+            document.getElementById('question-overview').style.display = 'none';
+        }
+
+        function toggleTips() {
+            const tipsContent = document.querySelector('.tips-content');
+            const tipToggle = document.querySelector('.tip-toggle');
+            
+            if (tipsContent.style.display === 'none' || !tipsContent.style.display) {
+                tipsContent.style.display = 'block';
+                tipToggle.textContent = '💡 Hide Tips';
+            } else {
+                tipsContent.style.display = 'none';
+                tipToggle.textContent = '💡 Show Tips';
+            }
+        }
+
+        function endQuizEarly() {
+            showCustomConfirm('Are you sure you want to end the quiz early? Your progress will be saved.', () => {
+                endQuiz();
+            });
+        }
+
+        function showCustomConfirm(message, onConfirm) {
+            // Create custom confirmation dialog
+            const confirmDialog = document.createElement('div');
+            confirmDialog.className = 'custom-confirm-overlay';
+            confirmDialog.innerHTML = `
+                <div class="custom-confirm-dialog">
+                    <h3>End Quiz Early?</h3>
+                    <p>${message}</p>
+                    <div class="confirm-buttons">
+                        <button class="btn btn-secondary" onclick="closeCustomConfirm()">Cancel</button>
+                        <button class="btn btn-danger" onclick="confirmAction()">End Quiz</button>
+                    </div>
+                </div>
+            `;
+            
+            document.body.appendChild(confirmDialog);
+            
+            // Store the callback for later execution
+            window.confirmAction = () => {
+                onConfirm();
+                closeCustomConfirm();
+            };
+        }
+
+        function closeCustomConfirm() {
+            const overlay = document.querySelector('.custom-confirm-overlay');
+            if (overlay) {
+                overlay.remove();
+            }
+        }
+
+        function generateQuestionReview() {
+            const questions = currentQuiz.currentQuestions;
+            let reviewHTML = '';
+            
+            questions.forEach((question, index) => {
+                const questionNumber = index + 1;
+                const userAnswer = question.userAnswer !== undefined ? question.userAnswer : null;
+                const isCorrect = userAnswer !== null ? userAnswer === question.correct : false;
+                const userAnswerText = userAnswer !== null ? question.options[userAnswer] : 'Not answered';
+                const correctAnswerText = question.options[question.correct];
+                
+                reviewHTML += `
+                    <div class="review-question ${isCorrect ? 'correct' : 'incorrect'}">
+                        <div class="review-header">
+                            <h4>Question ${questionNumber}</h4>
+                            <span class="review-status ${isCorrect ? 'correct' : 'incorrect'}">
+                                ${isCorrect ? '✓ Correct' : '✗ Incorrect'}
+                            </span>
+                        </div>
+                        <div class="review-content">
+                            <p class="question-text">${question.question}</p>
+                            <div class="answer-comparison">
+                                <div class="user-answer">
+                                    <strong>Your Answer:</strong> ${userAnswer !== null ? String.fromCharCode(65 + userAnswer) + '. ' : ''}${userAnswerText}
+                                </div>
+                                <div class="correct-answer">
+                                    <strong>Correct Answer:</strong> ${String.fromCharCode(65 + question.correct)}. ${correctAnswerText}
+                                </div>
+                            </div>
+                            <div class="explanation">
+                                <strong>Explanation:</strong> ${question.explanation}
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            return reviewHTML;
+        }
+
+        function selectOption(selectedIndex) {
+            const result = currentQuiz.submitAnswer(selectedIndex);
+            
+            // Store the answer for later review (no immediate feedback)
+            const currentQuestion = currentQuiz.currentQuestions[currentQuestionIndex];
+            currentQuestion.userAnswer = selectedIndex;
+            currentQuestion.isCorrect = selectedIndex === currentQuestion.correct;
+            
+            // Disable all option buttons after selection
+            const optionBtns = document.querySelectorAll('.option-btn');
+            optionBtns.forEach(btn => {
+                btn.disabled = true;
+                btn.style.opacity = '0.6';
+            });
+            
+            // Show brief feedback (just correct/incorrect, no explanation)
+            showBriefFeedback(result.isCorrect);
+            
+            // Auto-advance to next question after 1.5 seconds
+            setTimeout(() => {
+                if (currentQuestionIndex < currentQuiz.totalQuestions - 1) {
+                    nextQuestion();
+                } else {
+                    endQuiz();
+                }
+            }, 1500);
+        }
+
+        function nextQuestion() {
+            console.log('Next button clicked. Current index:', currentQuestionIndex, 'Total questions:', currentQuiz.totalQuestions);
+            if (currentQuestionIndex < currentQuiz.totalQuestions - 1) {
+                currentQuestionIndex++;
+                // Update quiz engine's internal index (0-based)
+                currentQuiz.currentQuestionIndex = currentQuestionIndex;
+                console.log('Moving to question:', currentQuestionIndex + 1);
+                displayQuestion();
+            } else {
+                console.log('Quiz complete, ending...');
+                endQuiz();
+            }
+        }
+
+        function previousQuestion() {
+            if (currentQuestionIndex > 0) {
+                currentQuestionIndex--;
+                // Update quiz engine's internal index (0-based)
+                currentQuiz.currentQuestionIndex = currentQuestionIndex;
+                displayQuestion();
+            }
+        }
+
+        function skipQuestion() {
+            // Mark question as skipped (use 0-based index)
+            currentQuiz.markQuestionAsSkipped(currentQuestionIndex);
+            
+            // Move to next question
+            nextQuestion();
+        }
+
+        function markForReview() {
+            // Toggle mark for review (use 0-based index)
+            currentQuiz.toggleMarkForReview(currentQuestionIndex);
+            
+            // Update the button
+            const markBtn = document.querySelector('.question-actions .btn-secondary');
+            if (markBtn) {
+                const question = currentQuiz.getCurrentQuestion();
+                markBtn.innerHTML = question.markedForReview ? '✓ Marked for Review' : '📝 Mark for Review';
+                markBtn.disabled = question.markedForReview;
+            }
+        }
+
+        function showBriefFeedback(isCorrect) {
+            const questionContainer = document.getElementById('question-container');
+            const feedbackDiv = document.createElement('div');
+            feedbackDiv.className = `brief-feedback ${isCorrect ? 'correct' : 'incorrect'}`;
+            feedbackDiv.innerHTML = `
+                <div class="feedback-content">
+                    <h3>${isCorrect ? '✓ Correct!' : '✗ Incorrect'}</h3>
+                    <p>${isCorrect ? 'Great job! Moving to next question...' : 'Keep going! Moving to next question...'}</p>
+                </div>
+            `;
+            
+            // Insert feedback above the question
+            const questionText = questionContainer.querySelector('.question-text');
+            if (questionText) {
+                questionText.parentNode.insertBefore(feedbackDiv, questionText.nextSibling);
+            }
+        }
+
+        function showAnswerFeedback(result) {
+            const questionContainer = document.getElementById('question-container');
+            const currentQuestion = currentQuiz.currentQuestions[currentQuestionIndex];
+            
+            questionContainer.innerHTML = `
+                <div class="answer-feedback ${result.isCorrect ? 'correct' : 'incorrect'}">
+                    <h3>${result.isCorrect ? 'Correct!' : 'Incorrect'}</h3>
+                    <p><strong>Your Answer:</strong> ${String.fromCharCode(65 + result.correctAnswer)}. ${currentQuestion.options[result.correctAnswer]}</p>
+                    <div class="explanation">
+                        <h4>Explanation:</h4>
+                        <p>${result.explanation}</p>
+                    </div>
+                    <div class="score-display">
+                        <p>Score: ${result.score} / ${result.totalAnswered}</p>
+                    </div>
+                    <div class="next-question">
+                        <p>Click "Next →" to continue to the next question</p>
+                    </div>
+                </div>
+            `;
+        }
+
+        function endQuiz() {
+            const results = currentQuiz.getResults();
+            const stats = currentQuiz.getQuestionStats();
+            
+            // Stop timer
+            if (quizTimer) {
+                clearInterval(quizTimer);
+            }
+            
+            // Hide additional sections
+            document.querySelector('.hero').style.display = 'none';
+            document.querySelector('.footer').style.display = 'none';
+            document.querySelector('.navbar').style.display = 'none'; // Hide navbar
+            
+            // Show results
+            document.getElementById('quiz-interface').style.display = 'none';
+            document.getElementById('quiz-results').style.display = 'block';
+            document.getElementById('learning-paths').style.display = 'none';
+            document.getElementById('learning-resources').style.display = 'none';
+            document.getElementById('cta-section').style.display = 'none';
+            
+            // Remove any height constraints
+            document.getElementById('quiz-results').style.minHeight = 'auto';
+            document.getElementById('quiz-results').style.height = 'auto';
+            
+            document.getElementById('quiz-results').innerHTML = `
+                <div class="quiz-results-content">
+                    <h2>Quiz Complete!</h2>
+                    <div class="quiz-header-section">
+                        <div class="quiz-stats">
+                            <div class="stat-box">
+                                <span class="stat-label">Score</span>
+                                <span class="stat-value">${results.score}/${results.totalQuestions}</span>
+                            </div>
+                            <div class="stat-box">
+                                <span class="stat-label">Percentage</span>
+                                <span class="stat-value">${results.percentage}%</span>
+                            </div>
+                            <div class="stat-box">
+                                <span class="stat-label">Time</span>
+                                <span class="stat-value">${formatTime(results.timeElapsed)}</span>
+                            </div>
+                            <div class="stat-box ${results.passed ? 'passed' : 'failed'}">
+                                <span class="stat-label">Result</span>
+                                <span class="stat-value">${results.passed ? 'PASSED' : 'FAILED'}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quiz-breakdown">
+                        <h3>Question Breakdown</h3>
+                        <div class="breakdown-stats">
+                            <div class="breakdown-stat">
+                                <span class="breakdown-label">Answered:</span>
+                                <span class="breakdown-value answered">${stats.answered}</span>
+                            </div>
+                            <div class="breakdown-stat">
+                                <span class="breakdown-label">Skipped:</span>
+                                <span class="breakdown-value skipped">${stats.skipped}</span>
+                            </div>
+                            <div class="breakdown-stat">
+                                <span class="breakdown-label">Marked:</span>
+                                <span class="breakdown-value review">${stats.markedForReview}</span>
+                            </div>
+                            <div class="breakdown-stat">
+                                <span class="breakdown-label">Unanswered:</span>
+                                <span class="breakdown-value unanswered">${stats.unanswered}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quiz-detailed-results">
+                        <h3>Detailed Results</h3>
+                        <div class="question-review-list">
+                            ${generateQuestionReview()}
+                        </div>
+                    </div>
+                    <div class="quiz-actions">
+                        <button class="quiz-btn primary" onclick="restartQuiz()">Take Another Quiz</button>
+                        <button class="quiz-btn secondary" onclick="backToLearningPaths()">Back to Learning Paths</button>
+                    </div>
+                </div>
+            `;
+        }
+
+        function startTimer() {
+            quizTimer = setInterval(() => {
+                timeRemaining--;
+                const timeDisplay = document.getElementById('time-display');
+                if (timeDisplay) {
+                    timeDisplay.textContent = formatTime(timeRemaining);
+                }
+                
+                if (timeRemaining <= 0) {
+                    endQuiz();
+                }
+            }, 1000);
+        }
+
+        function formatTime(seconds) {
+            const minutes = Math.floor(seconds / 60);
+            const remainingSeconds = seconds % 60;
+            return `${minutes}:${remainingSeconds.toString().padStart(2, 0)}`;
+        }
+
+        function restartQuiz() {
+            // Reset all display styles to their original state
+            document.querySelector('.hero').style.display = '';
+            document.querySelector('.footer').style.display = '';
+            document.querySelector('.navbar').style.display = '';
+            
+            document.getElementById('quiz-results').style.display = 'none';
+            document.getElementById('quiz-interface').style.display = 'none';
+            document.getElementById('learning-paths').style.display = '';
+            document.getElementById('learning-resources').style.display = '';
+            document.getElementById('cta-section').style.display = '';
+            
+            // Reset height
+            document.getElementById('quiz-results').style.minHeight = '';
+            document.getElementById('quiz-results').style.height = '';
+            
+            // Scroll to learning paths section
+            document.getElementById('learning-paths').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function backToLearningPaths() {
+            // Reset all display styles to their original state
+            document.querySelector('.hero').style.display = '';
+            document.querySelector('.footer').style.display = '';
+            document.querySelector('.navbar').style.display = '';
+            
+            document.getElementById('quiz-results').style.display = 'none';
+            document.getElementById('quiz-interface').style.display = 'none';
+            document.getElementById('learning-paths').style.display = '';
+            document.getElementById('learning-resources').style.display = '';
+            document.getElementById('cta-section').style.display = '';
+            
+            // Reset height
+            document.getElementById('quiz-results').style.minHeight = '';
+            document.getElementById('quiz-results').style.height = '';
+            
+            // Scroll to learning paths section
+            document.getElementById('learning-paths').scrollIntoView({ behavior: 'smooth' });
+        }
+        
+
+
+
+
+        function startLearning() {
+            window.open('https://www.udemy.com/share/101WjI/', '_blank');
+        }
+
+        function viewSyllabus() {
+            window.open('https://d1.awsstatic.com/training-and-certification/docs-cloud-practitioner/AWS-Certified-Cloud-Practitioner_Exam-Guide.pdf', '_blank');
+        }
+    </script>
+    
+
+</body>
+</html> 
